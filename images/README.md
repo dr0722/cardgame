@@ -1,6 +1,6 @@
 # 卡牌遊戲圖片資源
 
-本目錄包含卡牌遊戲所需的圖片資源。
+本目錄包含卡牌遊戲所需的海洋動物圖片資源。
 
 ## 從網路下載圖片
 
@@ -8,7 +8,7 @@
 
 ### 使用現有下載腳本
 
-本專案已包含兩個下載腳本，您可以直接執行它們來下載預設的卡牌圖片：
+本專案已包含兩個下載腳本，您可以直接執行它們來下載預設的海洋動物圖片：
 
 #### JavaScript 版本
 ```bash
@@ -20,7 +20,7 @@ node download_images.js
 python download_images.py
 ```
 
-這些腳本會自動下載幾張基本的卡牌圖片到當前目錄。
+這些腳本會自動下載幾張海洋動物圖片到當前目錄。
 
 ### 自訂下載（Node.js）
 
@@ -103,18 +103,33 @@ def download_image(url, filepath):
 
 為了保持一致性，請按照以下命名規則添加圖片：
 
-- 卡牌背面: `card-back.png`
-- 卡牌正面: `card-<suit>-<value>.png`（例如：`card-hearts-ace.png`）
+- 海洋動物: `ocean-<animal-name>.png`（例如：`ocean-shark.png`）
+- 背景圖片: `bg-<description>.png`（例如：`bg-underwater.png`）
 - 遊戲介面元素: `ui-<element-name>.png`（例如：`ui-button.png`）
 
 ## 圖片資源來源
 
 使用外部圖片資源時，請確保您有合法權限使用這些圖片，並在下方列出圖片來源：
 
-- [Playing Cards Assets](https://github.com/hayeah/playing-cards-assets) - MIT 授權
+- [OpenClipart](https://openclipart.org/) - 公共領域 (CC0 1.0)
+- [FreeSVG](https://freesvg.org/) - 公共領域 (CC0 1.0)
+
+## 疑難排解
+
+如果在下載圖片時遇到問題，可嘗試以下解決方案：
+
+1. **檢查網路連接**：確保您有穩定的網路連接
+2. **更改圖片來源**：在下載腳本中修改圖片URL
+3. **直接下載**：使用瀏覽器訪問URL並手動儲存圖片
+4. **使用備用圖片**：腳本自帶備用URL和預設圖片生成功能
+
+當自動下載失敗時，腳本會嘗試:
+- 從主要URL下載
+- 從備用URL下載
+- 創建簡單的預設圖片
 
 ## 注意事項
 
 - 請使用PNG或JPG格式的圖片
-- 建議卡牌圖片尺寸為300x450像素
+- 建議卡牌圖片尺寸為300x300像素
 - 圖片大小應小於500KB以確保遊戲載入速度
