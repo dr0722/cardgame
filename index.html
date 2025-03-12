@@ -1,35 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-tw">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>海洋動物閃卡遊戲</title>
+    <title>閃卡遊戲</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>海洋動物閃卡遊戲</h1>
-        <div class="card-container">
-            <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img id="animal-image" src="" alt="海洋動物">
-                    </div>
-                    <div class="card-back">
-                        <p id="animal-word"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="controls">
-            <button id="flip-btn">翻轉卡片</button>
-            <button id="speak-btn">發音</button>
-            <button id="next-btn">下一個</button>
-        </div>
-        <div class="progress">
-            <div id="progress-bar"></div>
-        </div>
+    <div class="flashcard" id="flashcard">
+        <div class="word" id="word">penguin</div>
     </div>
+    <button id="nextButton">下一張</button>
     <script src="script.js"></script>
 </body>
 </html>
